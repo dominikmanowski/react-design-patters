@@ -1,9 +1,10 @@
 import React from 'react';
+import RickAndMortyCharacterCards from './components/RickAndMortyCharacterCards';
 
 function App() {
   return (
     <div>
-      Hello World
+      <RickAndMortyCharacterCards />
     </div>
   );
 }

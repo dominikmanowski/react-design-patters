@@ -1,0 +1,56 @@
+.id-card-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0;
+  width: 100%;
+}
+
+.id-card {
+  flex-basis: 100%;
+  max-width: 50rem;
+  border: 1px solid #0eabca;
+  color: #fff;
+  padding: 1.5rem;
+  background-color: #0a2129;
+  box-shadow: 0 0 3px 1px #12a0a0, inset 0 0 3px 1px #12a0a0;
+}
+
+.profile-row {
+  display: flex;
+
+  &__avatar {
+    flex-basis: 33.3%;
+    position: relative;
+    margin: 2.5rem;
+    align-self: center;
+  }
+}
+
+.avatar {
+  &__image {
+    max-width: 100%;
+    border-radius: 50%;
+    display: block;
+    box-shadow: 0 0 4px 3px #0eabca;
+  }
+}
+
+.profile-row {
+  &__desc {
+    font-family: "Orbitron", sans-serif;
+    color: #ecfcfb;
+    text-shadow: 0 0 4px #12a0a0;
+    letter-spacing: 1px;
+    line-height: 2.5rem;
+    padding: 1.5rem;
+    flex-basis: 66.6%;
+  }
+}
+
+.desc {
+  &__name {
+    display: inline-block;
+    font-size: 2.8rem;
+    margin: 1.3rem 0;
+  }
+}
