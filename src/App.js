@@ -1,5 +1,5 @@
 import React from 'react';
-import RickAndMortyCharacterCards from './components/RickAndMortyCharacterCards';
+import RickAndMortyCharacterCards from './containers/RickAndMortyCharacterCards';
 
 function App() {
   return (

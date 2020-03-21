@@ -1,21 +1,10 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
-import style from './RickAndMortyCharacterCards.module.scss'
+import React from 'react'
+import PropTypes from 'prop-types'
+import style from './CharacterCards.module.scss'
 
-const API_URL = 'https://rickandmortyapi.com/api/character/'
 const UNKNOWN_AVATAR_URL = `${process.env.PUBLIC_URL}/images/unknown-avatar.png`
 
-const RickAndMortyCharacterCards = () => {
-  const [characters, setCharacters] = useState([])
-
-  useEffect(() => {
-    const getCharacters = async () => {
-      const { data: { results } } = await axios.get(API_URL)
-      await setCharacters(results)
-    }
-    getCharacters();
-  }, [])
-
+const CharacterCards = ({ characters }) => {
   return (
     <div>
       {characters.map(({ name, image = UNKNOWN_AVATAR_URL, species, gender }) => (
@@ -38,4 +27,13 @@ const RickAndMortyCharacterCards = () => {
   )
 }
 
-export default RickAndMortyCharacterCards
+CharacterCards.propTypes = {
+  characters: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    species: PropTypes.string.isRequired,
+    gender: PropTypes.string.isRequired,
+  }))
+}
+
+export default CharacterCards
