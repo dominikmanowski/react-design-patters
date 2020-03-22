@@ -1,6 +1,13 @@
-.avatar-image {
-  max-width: 100%;
-  border-radius: 50%;
-  display: block;
-  box-shadow: 0 0 4px 3px #0eabca;
+.avatar {
+  flex-basis: 33.3%;
+  position: relative;
+  margin: 2.5rem;
+  align-self: center;
+
+  &__image {
+    max-width: 100%;
+    border-radius: 50%;
+    display: block;
+    box-shadow: 0 0 4px 3px #0eabca;
+  }
 }

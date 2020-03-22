@@ -4,11 +4,11 @@ import style from './Description.module.scss'
 
 const Description = ({ name, species, gender }) => {
   return (
-    <>
-      <h2 className={style.name}>{name}</h2>
+    <div className={style.desc}>
+      <h2 className={style['desc__name']}>{name}</h2>
       <p>Species: {species}</p>
       <p>Gender: {gender}</p>
-    </>
+    </div>
   )
 }
 
