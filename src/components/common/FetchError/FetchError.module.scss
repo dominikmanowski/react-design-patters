@@ -1,0 +1,14 @@
+.async-status-wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-message {
+  color: #0eabca;
+  font-size: 2rem;
+  font-family: monospace;
+  line-height: 3rem;
+}

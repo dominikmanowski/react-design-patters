@@ -2,8 +2,17 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import style from './CharacterCards.module.scss'
 import ProfileRow from './ProfileRow/ProfileRow'
+import FetchError from '../common/FetchError/FetchError'
+import LoadingSpinner from '../common/LoadingSpinner/LoadingSpinner'
 
-const CharacterCards = ({ characters }) => {
+const CharacterCards = ({ characters, isLoading, error }) => {
+  if (error) {
+    const { message: errorMessage } = error;
+    return <FetchError errorMessage={errorMessage} />
+  }
+  if (isLoading) {
+    return <LoadingSpinner />
+  }
   return (
     <div>
       {characters.map(character => (
